@@ -74,4 +74,17 @@ Copy paste the following script
 gitHub repo: https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese
 Modify the branch from master to main
 Copy the contents of https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/JenkinsScript to the shell script section.
-14. Execute the job.
+14. Give access to jenkins user to execute aws and kubectl commands
+	cp -r /home/<user>/.kube /var/lib/jenkins/  
+	systemctl restart jenkins  
+	
+	cd /var/lib/jenkins/.kube  
+	chown jenkins:jenkins config  
+	ls -ld config  
+	
+	sudo -su jenkins  
+	aws configure  
+	aws update-kubeconfig  
+	chmod 777 ~/.kube/config  
+	
+15.Execute the job.
