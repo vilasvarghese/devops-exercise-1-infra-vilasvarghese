@@ -58,9 +58,10 @@ Steps to execute
 GitHub: Click Credentials → Global → Add Credentials , choose Username with password as Kind, enter the GitHub username and password and use gitHubCredentials for ID.
 (N.B: For now i have hardcoded this in the yaml files - kindly modify the same rather than creating these credentials)
 
-Create a simple job (not pipeline)
+Create a Freestyle job (not pipeline)
 Copy paste the following script
 
 gitHub repo: https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese
+Modify the branch from master to main
 Copy the contents of https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/JenkinsScript to the shell script section.
 14. Execute the job.
