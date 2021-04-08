@@ -33,7 +33,8 @@ sudo systemctl enable docker
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 
-echo "Install Kubernetes Master"
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-eksctl cluster create
+#echo "Install Kubernetes Master"
+#This is one time and can be done from the host machine.
+#curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+#sudo mv /tmp/eksctl /usr/local/bin
+#eksctl cluster create
