@@ -48,6 +48,8 @@ Steps to execute
   Connect to jenkins instance and do the following 
   
   aws configure
+  aws sts get-caller-identity
+  aws update-kubeconfig
   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
   cp kubectl /usr/local/bin/
   sudo ln -s /usr/local/bin/kubectl /usr/bin/kubectl
