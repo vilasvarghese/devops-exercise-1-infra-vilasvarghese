@@ -42,7 +42,8 @@ Steps to execute
   eksctl version
   eksctl create cluster --name my-cluster --region us-east-2 --fargate
 
-  Setup kubectl to work with remote kubernetes master
+  Setup kubectl to work with remote kubernetes master according to the instructions given in the link
+  https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
   
 
 13. Setup jenkins to execute a ci/cd job
