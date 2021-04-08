@@ -32,28 +32,28 @@ Steps to execute
 8. Make necessary configurational changes to 
   https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/variables.tf
   https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/terraform.tfvars
-9.  terraform init
-10. terraform plan
-11. terraform apply
-12. Launch an ec2 instance
-  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-  sudo mv /tmp/eksctl /usr/local/bin
-  sudo ln -s /usr/local/bin/eksctl /usr/bin/eksctl
-  eksctl version
-  eksctl create cluster --name my-cluster --region us-east-2 --fargate
+9.  terraform init  
+10. terraform plan  
+11. terraform apply  
+12. Launch an ec2 instance  
+  curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp  
+  sudo mv /tmp/eksctl /usr/local/bin  
+  sudo ln -s /usr/local/bin/eksctl /usr/bin/eksctl  
+  eksctl version  
+  eksctl create cluster --name my-cluster --region us-east-2 --fargate  
 
-  Setup kubectl to work with remote kubernetes master according to the instructions given in the link
-  https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
-  since we are using amazon instance - it already has aws.
-  Connect to jenkins instance and do the following 
+  Setup kubectl to work with remote kubernetes master according to the instructions given in the link  
+  https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html  
+  since we are using amazon instance - it already has aws.  
+  Connect to jenkins instance and do the following   
   
-  aws configure
-  aws sts get-caller-identity
-  aws update-kubeconfig
-  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-  cp kubectl /usr/local/bin/
-  sudo ln -s /usr/local/bin/kubectl /usr/bin/kubectl
-  chmod 777 /usr/local/bin/kubectl
+  aws configure  
+  aws sts get-caller-identity  
+  aws update-kubeconfig  
+  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"   
+  cp kubectl /usr/local/bin/   
+  sudo ln -s /usr/local/bin/kubectl /usr/bin/kubectl   
+  chmod 777 /usr/local/bin/kubectl  
 
 13. Setup jenkins to execute a ci/cd job
   Login to <jenkins instance ip>:8080
