@@ -61,6 +61,7 @@ GitHub: Click Credentials → Global → Add Credentials , choose Username with 
 Create a simple job (not pipeline)
 Copy paste the following script
 
+gitHub repo: https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese
 -------------------------------------------------------------
 mvn clean install
 docker build -t java-web-app-cicd:latest .
@@ -76,6 +77,7 @@ docker commit java-web-app-cicd <your docker user name>/java-web-app-cicd:latest
 docker push <your docker user name>/java-web-app-cicd:latest
 
 kubectl delete deploy --all
+
 kubectl create -f deploy-tomcat.yaml
 -------------------------------------------------------------
 
