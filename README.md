@@ -44,7 +44,14 @@ Steps to execute
 
   Setup kubectl to work with remote kubernetes master according to the instructions given in the link
   https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+  since we are using amazon instance - it already has aws.
+  Connect to jenkins instance and do the following 
   
+  aws configure
+  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+  cp kubectl /usr/local/bin/
+  sudo ln -s /usr/local/bin/kubectl /usr/bin/kubectl
+  chmod 777 /usr/local/bin/kubectl
 
 13. Setup jenkins to execute a ci/cd job
   Login to <jenkins instance ip>:8080
