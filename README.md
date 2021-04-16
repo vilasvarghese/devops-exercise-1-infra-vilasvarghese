@@ -19,19 +19,22 @@ Steps to execute
 	sudo su
 	unzip terraform_0.14.10_linux_amd64.zip -d /usr/bin/
 	terraform -v
-4. Configure aws
-  aws configure
-  provide Access Key ID:, Secret Access Key:
-	region:us-east-2 and output: json
-5. install git
-  yum install git -y
+4. Configure aws  
+  aws configure  
+  provide   
+  	Access Key ID:,  
+	Secret Access Key:  
+	region:us-east-2   
+	output: json  
+5. install git  
+  yum install git -y  
   
-6. git clone https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese
-  Replace this with your account if you have forked.
-7. cd devops-exercise-1-infra-vilasvarghese/terraform
-8. Make necessary configurational changes to 
-  https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/variables.tf
-  https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/terraform.tfvars
+6. git clone https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese  
+  Replace this with your account if you have forked. 
+7. cd devops-exercise-1-infra-vilasvarghese/terraform  
+8. Make necessary configurational changes to  
+  https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/variables.tf  
+  https://github.com/vilasvarghese/devops-exercise-1-infra-vilasvarghese/blob/main/terraform/terraform.tfvars  
 9.  terraform init  
 10. terraform plan  
 11. terraform apply  
@@ -46,6 +49,8 @@ Steps to execute
   https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html  
   since we are using amazon instance - it already has aws.  
   Connect to jenkins instance and do the following   
+  
+  N.B: This would allow the jenkins server instance to work with a remote kubernetes (setup kubectl to work remotely in aws)
   
   aws configure  
   aws sts get-caller-identity  
@@ -88,3 +93,6 @@ Copy the contents of https://github.com/vilasvarghese/devops-exercise-1-infra-vi
 	chmod 777 ~/.kube/config  
 	
 15.Execute the job.
+
+
+16. Don't forget to do terraform destroy once you are done with this.
