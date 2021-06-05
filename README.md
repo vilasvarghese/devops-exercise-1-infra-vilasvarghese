@@ -89,7 +89,8 @@ Copy the contents of https://github.com/vilasvarghese/devops-exercise-1-infra-vi
 	
 	sudo -su jenkins  
 	aws configure  
-	aws update-kubeconfig  
+	#aws update-kubeconfig
+	aws eks update-kubeconfig --name <cluster name> --region <region name>
 	chmod 777 ~/.kube/config  
 	
 15.Execute the job.
