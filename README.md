@@ -26,6 +26,10 @@ Steps to execute
 	Secret Access Key:  
 	region:us-east-2   
 	output: json  
+	
+Also configure "Access key id" and "Secret Key" according to https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+This is required in terraform.
+
 5. install git  
   yum install git -y  
   
