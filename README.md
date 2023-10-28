@@ -101,3 +101,9 @@ Copy the contents of https://github.com/vilasvarghese/devops-exercise-1-infra-vi
 
 
 16. Don't forget to do terraform destroy once you are done with this.
+
+
+N.B: 1.24.3 kubectl is failing with root
+        uninstall and install curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.6/bin/linux/amd64/kubectl
+
+
